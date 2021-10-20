@@ -1,5 +1,6 @@
 //initialize storage class object
 const storage = new Storage();
+//get stored location, or application's default location
 const storedLocation = storage.getLocation();
 //initialize weather class object and pull param val from storage
 const weather = new Weather(storedLocation.city, storedLocation.state);

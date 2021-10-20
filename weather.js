@@ -1,7 +1,19 @@
-//fetch from netlify serverless function
-fetch(`.netlify/functions/fetch-weather?city=Portland&state=OR`)
-  .then(response => response.json())
-  .then(data => console.log(data));
+class Weather {
+  constructor(city, state) {
+    this.city = city;
+    this.state = state;
+  }
+  async getWeather() {
+    const response = await fetch(`.netlify/functions/fetch-weather?city=${this.city}&state=${this.state}`);
+    const responseData = await response.json();
+    console.log(responseData);
+    return responseData;
+  }
+  changeLocation(city, state) {
+    this.city = city;
+    this.state = state;
+  }
+}
 
 
 //function that converts wind degrees to text description

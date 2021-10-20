@@ -4,8 +4,8 @@ const axios = require('axios')
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 
   
-  const handler = async (event, context) => {
-    //these are tacked on to the fetch call from index.js
+  const handler = async (event) => {
+    //these query strings are tacked on to the fetch call from Weather.getWeather() method
     const city = event.queryStringParameters.city;
     const state = event.queryStringParameters.state;
     //get api key from environment variable

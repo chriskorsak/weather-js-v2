@@ -6,7 +6,7 @@ class Weather {
   async getWeather() {
     const response = await fetch(`.netlify/functions/fetch-weather?city=${this.city}&state=${this.state}`);
     const responseData = await response.json();
-    return responseData;
+    return responseData.data;
   }
   changeLocation(city, state) {
     this.city = city;

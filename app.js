@@ -4,7 +4,7 @@ const storage = new Storage();
 const storedLocation = storage.getLocation();
 //initialize weather class object and pull param val from storage
 const weather = new Weather(storedLocation.city, storedLocation.state);
-//initialize ui class object
+//initialize ui class object, grab elements from page for populating later with weather data.
 const ui = new UI();
 
 //load weather when page loads

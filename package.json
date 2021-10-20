@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "netlify-cli": "^6.12.3"
+  },
+  "scripts": {
+    "netlify": "./node_modules/.bin/netlify"
+  },
+  "dependencies": {
+    "axios": "^0.23.0"
+  }
+}
